@@ -1,0 +1,65 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="jquery-ui-themes-1.11.4/themes/smoothness/jquery-ui.css">
+  <style>
+  .prop_list .ui-selecting {
+    background: #ccc;
+  }
+  .prop_list .ui-selected {
+    background: #999;
+  }
+  </style>
+<script src="jquery-1.11.3.min.js"></script>
+<script src="jquery-ui-1.11.4/jquery-ui.min.js"></script>
+<script src='logic.js'></script>
+<script src='prover.js'></script>
+</head>
+<body>
+Proof:
+<ul id='proof' class='prop_list'>
+</ul>
+
+<div id='selected_steps'>
+</div>
+<div id="tabs">
+  <ul>
+    <li><a href="#mp_tab"><span>Modus Ponus</span></a></li>
+    <li><a href="#sub_tab"><span>Substitution</span></a></li>
+    <li><a href="#ass_tab"><span>Add Assumption</span></a></li>
+  </ul>
+  <div id="mp_tab">
+  <p>
+  Proposition 1:  <span id="mp_p1">Please select steps</span>
+  </p>
+  <p>
+  Proposition 2:  <span id="mp_p2">Please select steps</span>
+  </p>
+  <input id="button" id="mp_button" type='button' value='Add' onclick='add_mp()' />
+
+  </div>
+  <div id="sub_tab">
+  Poposiion:  <span id="sub_p">Please select steps</span>
+  <br />
+  Subsititutions:
+  <br />
+  <ul id='sub_vars'>
+  
+  </ul>
+  <input id="button" id="sub_button" type='button' value='Add' onclick='add_sub()' />
+
+
+  </div>
+  <div id="ass_tab">
+  Please input new assumption and press add <br />
+  <input id="new_assumption" width=100 />
+  <input id="button" id="ass_button" type='button' value='Add' onclick='add_assumption()' />
+  </div>
+</div>
+<div id='message'>
+</div>
+<script>
+$(document).ready(init_proof);
+</script>
+</body>
+</html>
