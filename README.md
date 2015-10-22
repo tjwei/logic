@@ -1,6 +1,6 @@
 # logic caclulator
 
-Instruction Video
+Instruction Video (in Mandarin)
 https://www.youtube.com/watch?v=c8ngNAquXwU
 
 Online Demo
